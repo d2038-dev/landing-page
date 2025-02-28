@@ -10,13 +10,12 @@
 
 body {
   font-family: Roboto, sans-serif;
-  background-color: #1f2937;
   line-height: 1.5;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 button {
@@ -24,15 +23,16 @@ button {
 }
 
 .section-1 {
-  padding: 15px 220px 30px;
+  padding: 15px 220px 110px;
   color: #f9faf8;
+  background-color: #1f2937;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 40px;
+  margin-bottom: 110px;
 }
 
 .logo {
@@ -63,37 +63,72 @@ button {
 }
 
 .content {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 
 .text-container,
 .image-wrapper {
-    flex: 1;
+  flex: 1;
 }
 
 .text-container {
-    padding-right: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  padding-right: 40px;
 }
 
 .btn {
-    margin-top: 10px;
-    padding: 6px 36px;
-    border-radius: 9px;
-    border: none;
-    background-color: #3882f6;
-    color: #f9faf8;
-    font-weight: 900;
-    font-size: 18px;
+  margin-top: 10px;
+  padding: 6px 36px;
+  border-radius: 9px;
+  border: none;
+  background-color: #3882f6;
+  color: #f9faf8;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 .image-wrapper {
-    padding-top: 90px;
+  border-radius: 6px;
+  height: 300px;
+  overflow: hidden;
+  width: 500px;
 }
 
-.main-image {
-    clip-path: inset(0 0 90px 0 round 6px); 
+.section-2 {
+  text-align: center;
+  padding: 36px 20px 120px;
+}
+
+.info-heading {
+  color: #1f2937;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 36px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card-image-wrapper {
+  border: 4px solid #3882f6;
+  border-radius: 10px;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.info-image {
+  object-fit: cover;
+  max-width: 140%;
+  object-position: -28px 0;
+}
+
+.info-text {
+  color: #1f2937;
+  font-size: 18px;
+  width: 16ch;
+  margin: 8px auto 0;
 }
