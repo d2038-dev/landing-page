@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -10,7 +12,6 @@
 
 body {
   font-family: Roboto, sans-serif;
-  line-height: 1.5;
 }
 
 img {
@@ -44,8 +45,11 @@ button {
 .text {
   color: #e5e7eb;
   font-size: 18px;
-  font-weight: 400;
   text-decoration: none;
+}
+
+.text {
+  line-height: 1.3;
 }
 
 .links {
@@ -131,4 +135,25 @@ button {
   font-size: 18px;
   width: 16ch;
   margin: 8px auto 0;
+  line-height: 1.1;
+}
+
+.section-3 {
+  background-color: #e5e7eb;
+  padding: 120px 300px 100px 340px;
+}
+
+.quote {
+  font-size: 36px;
+  font-style: italic;
+  color: #1f2937;
+  font-weight: 300;
+}
+
+figcaption {
+  text-align: end;
+  padding-right: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
 }
