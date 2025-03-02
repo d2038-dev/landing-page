@@ -81,14 +81,17 @@ button {
 }
 
 .btn {
-  margin-top: 10px;
   padding: 6px 36px;
   border-radius: 9px;
-  border: none;
   background-color: #3882f6;
   color: #f9faf8;
   font-weight: 900;
   font-size: 18px;
+}
+
+.main-btn {
+  margin-top: 10px;
+  border: none;
 }
 
 .image-wrapper {
@@ -156,4 +159,34 @@ figcaption {
   font-size: 24px;
   font-weight: 700;
   color: #1f2937;
+}
+
+.section-4 {
+  padding: 100px 220px;
+}
+
+.action-wrapper {
+  background-color: #3882f6;
+  padding: 50px 125px;
+  border-radius: 8px;
+}
+
+.action-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-title {
+  color: #f9faf8;
+  font-size: 24px;
+}
+
+.action-text {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+.action-btn {
+  border: 3px solid #f9faf8;
 }
