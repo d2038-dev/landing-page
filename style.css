@@ -180,13 +180,35 @@ figcaption {
 .action-title {
   color: #f9faf8;
   font-size: 24px;
+  letter-spacing: 0.5px;
 }
 
 .action-text {
   font-size: 18px;
   color: #e5e7eb;
+  letter-spacing: 0.5px;
 }
 
 .action-btn {
   border: 3px solid #f9faf8;
+}
+
+.section-5 {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 40px 0;
+  font-size: 18px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji {  
+  color: transparent;
+  text-shadow: 0 0 0 #e5e7eb;
+  font-size: 12px;
 }
