@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 *,
 *::before,
@@ -103,14 +103,14 @@ button {
 
 .section-2 {
   text-align: center;
-  padding: 36px 20px 120px;
+  padding: 50px 20px 120px;
 }
 
 .info-heading {
   color: #1f2937;
   font-size: 36px;
   font-weight: 900;
-  margin-bottom: 36px;
+  margin-bottom: 50px;
 }
 
 .cards {
@@ -125,6 +125,7 @@ button {
   width: 180px;
   height: 180px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .info-image {
@@ -136,7 +137,7 @@ button {
 .info-text {
   color: #1f2937;
   font-size: 18px;
-  width: 16ch;
+  width: 21ch;
   margin: 8px auto 0;
   line-height: 1.1;
 }
@@ -175,6 +176,7 @@ figcaption {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .action-title {
@@ -187,9 +189,11 @@ figcaption {
   font-size: 18px;
   color: #e5e7eb;
   letter-spacing: 0.5px;
+  width: 56ch;
 }
 
 .action-btn {
+  flex-shrink: 0;
   border: 3px solid #f9faf8;
 }
 
@@ -207,7 +211,7 @@ figcaption {
   gap: 10px;
 }
 
-.emoji {  
+.emoji {
   color: transparent;
   text-shadow: 0 0 0 #e5e7eb;
   font-size: 12px;
