@@ -1,10 +1,79 @@
-# Flexbox Code Snippets from Odin Project Landing Page
+# Code Snippets: Landing Page Project
 
-This document extracts high-quality, reusable flexbox examples from the Odin Project landing page project (`/home/d2038-dev/repos/top/landing-page`). Snippets focus on advanced flexbox concepts like containers, axis control, alignment, and item sizing, demonstrating best practices for responsive layouts in headers, hero sections, content areas, and footers. Each snippet includes context, explanation, and reference to the original CSS.
+This document extracts and documents selective, reusable code snippets from the Landing Page project, focusing on HTML structures and CSS properties, particularly Flexbox. All items are new compared to previous notes from the Odin Recipes project, which covered basic HTML5 structure, colors, fonts, and simple layouts without Flexbox or advanced semantic elements.
 
-## Flex Containers and Basic Setup
+## HTML Snippets
 
-### Navigation Header with Space Distribution
+### Navigation Structure
+
+```html
+<div class="nav">
+  <div class="logo">Motivation Central</div>
+  <ul class="links">
+    <li><a href="">Home</a></li>
+    <li><a href="">Speakers</a></li>
+    <li><a href="">Events</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
+</div>
+```
+
+- **Key Concept**: Semantic navigation with logo and unordered list for links.
+
+### Card Layout Structure
+
+```html
+<div class="cards">
+  <div class="card">
+    <div class="card-image-wrapper">
+      <img src="./images/shia.jpg" alt="" class="info-image" />
+    </div>
+    <p class="info-text">
+      Shia LaBeouf's "Just Do It!" inspires action and determination.
+    </p>
+  </div>
+  <!-- More cards -->
+</div>
+```
+
+- **Key Concept**: Reusable card components with image wrapper and text for content sections.
+
+### Quote with Figure Element
+
+```html
+<figure>
+  <blockquote class="quote">
+    Don't aim at success. The more you aim at it and make it a target, the more
+    you are going to miss it...
+  </blockquote>
+  <figcaption>-Viktor E. Frankl</figcaption>
+</figure>
+```
+
+- **Key Concept**: Semantic figure element for quotes with blockquote and figcaption.
+
+### Call-to-Action Section
+
+```html
+<div class="action-wrapper">
+  <div class="action-items">
+    <div class="action-text-wrapper">
+      <h3 class="action-title">Join the Motivation Movement!</h3>
+      <p class="action-text">
+        Sign up for exclusive content, event updates, and motivational tips from
+        our speakers, and more!
+      </p>
+    </div>
+    <button class="btn action-btn">Sign up</button>
+  </div>
+</div>
+```
+
+- **Key Concept**: Action-oriented sections with text and button for user engagement.
+
+## CSS Snippets
+
+### Flexbox Navigation
 
 ```css
 .nav {
@@ -15,29 +84,9 @@ This document extracts high-quality, reusable flexbox examples from the Odin Pro
 }
 ```
 
-**Context**: Used in the header section (`.section-1`) to create a horizontal navigation bar with logo on the left and links on the right.  
-**Explanation**: `display: flex` establishes the flex container. `justify-content: space-between` distributes items along the main axis with maximum space between them. `align-items: baseline` aligns items to their text baselines for consistent vertical positioning. This pattern is ideal for headers requiring left/right alignment without equal spacing.  
-**Reference**: `style.css:32-37`
+- **Key Concept**: Flexbox for horizontal layout with space distribution and baseline alignment.
 
-### Horizontal Link List
-
-```css
-.links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 26px;
-  letter-spacing: 0.4px;
-}
-```
-
-**Context**: Applied to the navigation links in the header.  
-**Explanation**: `display: flex` on the `<ul>` creates a flex container for list items. `gap: 26px` provides consistent spacing between flex items, replacing margins. This demonstrates flexbox for inline navigation menus.  
-**Reference**: `style.css:56-62`
-
-## Main/Cross Axis Control and Alignment
-
-### Hero Section with Centered Vertical Alignment
+### Flexbox Content Layout
 
 ```css
 .content {
@@ -45,13 +94,28 @@ This document extracts high-quality, reusable flexbox examples from the Odin Pro
   align-items: center;
   gap: 50px;
 }
+
+.text-container,
+.image-wrapper {
+  flex: 1;
+}
 ```
 
-**Context**: Layouts the hero content in `.section-1`, placing text and image side by side.  
-**Explanation**: `align-items: center` centers items along the cross axis (vertically in row direction). `gap: 50px` ensures spacing. This pattern is common for hero sections needing balanced vertical alignment.  
-**Reference**: `style.css:70-74`
+- **Key Concept**: Flexbox for side-by-side content with equal flex distribution and gap spacing.
 
-### Call-to-Action Section with Space Distribution
+### Flexbox Card Grid
+
+```css
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+```
+
+- **Key Concept**: Flexbox for horizontal card arrangement with centering and gaps.
+
+### Flexbox Action Items
 
 ```css
 .action-items {
@@ -62,11 +126,9 @@ This document extracts high-quality, reusable flexbox examples from the Odin Pro
 }
 ```
 
-**Context**: Used in the action section (`.section-4`) for text and button layout.  
-**Explanation**: `justify-content: space-between` pushes items to opposite ends of the main axis. `align-items: center` centers them vertically. `gap: 30px` adds minimum spacing. Effective for sections with text on one side and actions on the other.  
-**Reference**: `style.css:175-180`
+- **Key Concept**: Flexbox for distributing action text and button with space-between and center alignment.
 
-### Footer Copyright Centering
+### Flexbox Footer
 
 ```css
 .copyright {
@@ -77,37 +139,44 @@ This document extracts high-quality, reusable flexbox examples from the Odin Pro
 }
 ```
 
-**Context**: Centers the copyright text in the footer (`.section-5`).  
-**Explanation**: `justify-content: center` centers items along the main axis. `align-items: center` centers vertically. This is a standard pattern for footer content alignment.  
-**Reference**: `style.css:207-212`
+- **Key Concept**: Flexbox for centering copyright text with icon.
 
-## Item Sizing and Equal Distribution
-
-### Equal Flex Sizing for Hero Elements
+### Image Object Fit
 
 ```css
-.text-container,
-.image-wrapper {
-  flex: 1;
+.info-image {
+  object-fit: cover;
+  max-width: 140%;
+  object-position: -28px 0;
 }
 ```
 
-**Context**: Applied to text and image containers in the hero section.  
-**Explanation**: `flex: 1` (shorthand for `flex-grow: 1; flex-shrink: 1; flex-basis: 0`) makes items equally distribute available space. This ensures responsive equal-width columns in hero layouts.  
-**Reference**: `style.css:76-79`
+- **Key Concept**: Object-fit for responsive image cropping and positioning.
 
-## Content Area Layouts
-
-### Centered Card Grid
+### Button Styling
 
 ```css
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+.btn {
+  padding: 6px 36px;
+  border-radius: 9px;
+  background-color: #3882f6;
+  color: #f9faf8;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.action-btn {
+  min-width: 140px;
+  border: 3px solid #f9faf8;
 }
 ```
 
-**Context**: Arranges speaker cards in `.section-2`.  
-**Explanation**: `justify-content: center` centers the flex items as a group. `gap: 50px` spaces them evenly. This pattern works well for centered content grids without wrapping (assuming fixed item widths).  
-**Reference**: `style.css:114-118`
+- **Key Concept**: Reusable button styles with variants for different actions.
+
+## Notes on New Items
+
+- **Flexbox Properties**: Extensive use of `display: flex`, `justify-content` (space-between, center), `align-items` (baseline, center), `gap`, and `flex: 1` for responsive layouts not present in previous notes.
+- **Semantic HTML Elements**: Introduction of `nav`, `figure`, `blockquote`, `figcaption` for better structure and accessibility.
+- **Advanced CSS**: Properties like `object-fit`, `object-position`, `overflow`, `border-radius`, and `letter-spacing` for enhanced styling.
+- **Layout Concepts**: Multi-section page structure with class-based sections (section-1 to section-5) for modular design.
+- **No JavaScript**: Consistent with previous notes, no JS functions identified.
